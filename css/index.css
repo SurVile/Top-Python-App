@@ -1,0 +1,136 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a, a::before, a::after {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+h2 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+h3 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+h4 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+h5 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.ttf") format(truetype);
+  font-weight: 400;
+  font-style: normal;
+  font-variant: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Bold.ttf") format(truetype);
+  font-weight: 600;
+  font-style: normal;
+  font-variant: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Italic.ttf") format(truetype);
+  font-weight: 400;
+  font-style: italic;
+  font-variant: normal;
+}
+html, body {
+  line-height: 1.5;
+  color: #FBFCEE;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #090520;
+}
+
+._wrapper {
+  min-height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+section {
+  margin-bottom: 80px;
+}
+
+._container {
+  max-width: 1280px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 28px;
+  box-sizing: content-box;
+}
+
+[class$=_inner] {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.img_container {
+  overflow: hidden;
+}
+.img_container > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.img_container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+h1 {
+  font-size: 52px;
+  font-weight: 600;
+}
+
+h2 {
+  margin-bottom: 28px;
+  font-size: 32px;
+  font-weight: 600;
+}/*# sourceMappingURL=index.css.map */
