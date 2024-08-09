@@ -135,7 +135,11 @@ main {
             }
 
             .form-buttons {
-                margin-top: $insection_space;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: $inline_space;
+                margin-top: $inarticle_space;
             }
         }
     }

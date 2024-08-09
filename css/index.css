@@ -298,5 +298,9 @@ main > .reg_form .reg_form_inner > article > form > .form-places label {
   }
 }
 main > .reg_form .reg_form_inner .form-buttons {
-  margin-top: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
 }/*# sourceMappingURL=index.css.map */
