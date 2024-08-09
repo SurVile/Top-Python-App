@@ -43,6 +43,7 @@ section {
     position: relative;
     width: 100%;
     height: 100%;
+    padding: $insection_space;
     box-sizing: border-box;
 }
 
@@ -67,8 +68,32 @@ h1 {
     font-weight: 600;
 }
 
-h2 {
+h2:not(.logotype) {
     margin-bottom: $insection_space;
     font-size: $heading_size;
     font-weight: 600;
+}
+
+button {
+    padding: $global-text_size $global-text_size * 2;
+    border: $strong-width_border solid $accent_color;
+    border-radius: $radius;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    color: $ivory_color;
+    background-color: $accent_color;
+    transition: all .4s;
+} 
+
+button:hover {
+    border-color: $mindaro_color;
+    background-color: $mindaro_color;
+    color: $base_color;
+    cursor: pointer;
+}
+
+button:active {
+    border-color: #7d8334;
+    background-color: #7d8334;
+    color: $ivory_color;
 }

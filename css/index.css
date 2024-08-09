@@ -106,6 +106,7 @@ section {
   position: relative;
   width: 100%;
   height: 100%;
+  padding: 28px;
   box-sizing: border-box;
 }
 
@@ -129,8 +130,99 @@ h1 {
   font-weight: 600;
 }
 
-h2 {
+h2:not(.logotype) {
   margin-bottom: 28px;
   font-size: 32px;
   font-weight: 600;
+}
+
+button {
+  padding: 16px 32px;
+  border: 4px solid #FC1414;
+  border-radius: 4px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  color: #FBFCEE;
+  background-color: #FC1414;
+  transition: all 0.4s;
+}
+
+button:hover {
+  border-color: #F5FC90;
+  background-color: #F5FC90;
+  color: #090520;
+  cursor: pointer;
+}
+
+button:active {
+  border-color: #7d8334;
+  background-color: #7d8334;
+  color: #FBFCEE;
+}
+
+header.global {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background-color: rgba(9, 5, 32, 0.8666666667);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+}
+header.global .logotype {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+main > .front-page {
+  width: 100%;
+  height: 100vh;
+  background: radial-gradient(circle, rgb(66, 68, 44) 0%, rgb(9, 5, 32) 100%);
+}
+main > .front-page article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+main > .front-page article > .img_container {
+  width: 40%;
+  margin-top: 12px;
+}
+main > .bestsellers h2 {
+  text-align: center;
+}
+main > .bestsellers .items_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 28px;
+}
+main > .bestsellers .items_container > article {
+  flex: 1;
+  display: grid;
+  grid-template: 4fr 1fr 1fr/1fr;
+}
+main > .bestsellers .items_container > article > .item_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 28px;
+  text-align: center;
+}
+main > .bestsellers .items_container > article > .item_info > h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+main > .bestsellers .items_container > article > .button_block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 28px;
 }/*# sourceMappingURL=index.css.map */
