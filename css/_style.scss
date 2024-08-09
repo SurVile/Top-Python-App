@@ -15,7 +15,7 @@ html, body {
     line-height: 1.5;
     color: $ivory_color;
     font-family: $main_font;
-    font-size: $global-text_size;
+    font-size: clamp(12px, 5vw, $global-text_size);
     font-weight: 400;
     font-style: normal;
     background-color: $base_color;
@@ -64,13 +64,13 @@ section {
 }
 
 h1 {
-    font-size: $main-heading_size;
+    font-size: clamp(28px, 5vw, $main-heading_size);
     font-weight: 600;
 }
 
 h2:not(.logotype) {
     margin-bottom: $insection_space;
-    font-size: $heading_size;
+    font-size: clamp(20px, 5vw, $heading_size);
     font-weight: 600;
 }
 

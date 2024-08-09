@@ -11,7 +11,7 @@ header.global {
 
     .logotype {
         text-align: center;
-        font-size: 40px;
+        font-size: clamp(20px, 5vw, 40px);
         font-weight: 600;
     }
 }
@@ -28,6 +28,7 @@ main {
             justify-content: center;
             align-items: center;
             height: 100%;
+            text-align: center;
 
             > .img_container {
                 width: 40%;
@@ -37,6 +38,12 @@ main {
     }
 
     > .bestsellers {
+        .bestsellers_inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
         h2 {
             text-align: center;
         }
@@ -75,6 +82,15 @@ main {
                     padding: 0 $insection_space;
                 }
             }
+
+            @media screen and (max-width: 992px) {
+                flex-direction: column;
+                width: 60%;
+            }
+    
+            @media screen and (max-width: 648px) {
+                width: 100%;
+            }
         }
     }
 
@@ -85,15 +101,15 @@ main {
             align-items: center;
             width: 100%;
 
-            article {
+            > article {
                 width: 40%;
 
-                form {
+                > form {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
 
-                    .form-places {
+                    > .form-places {
                         display: flex;
                         flex-direction: column;
                         gap: $inarticle_space;
@@ -107,6 +123,14 @@ main {
                             width: 100%;
                         }
                     }
+                }
+
+                @media screen and (max-width: 800px) {
+                    width: 80%;
+                }
+
+                @media screen and (max-width: 466px) {
+                    width: 100%;
                 }
             }
 

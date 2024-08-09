@@ -78,7 +78,7 @@ html, body {
   line-height: 1.5;
   color: #FBFCEE;
   font-family: "Roboto", sans-serif;
-  font-size: 16px;
+  font-size: clamp(12px, 5vw, 16px);
   font-weight: 400;
   font-style: normal;
   background-color: #090520;
@@ -126,13 +126,13 @@ section {
 }
 
 h1 {
-  font-size: 52px;
+  font-size: clamp(28px, 5vw, 52px);
   font-weight: 600;
 }
 
 h2:not(.logotype) {
   margin-bottom: 28px;
-  font-size: 32px;
+  font-size: clamp(20px, 5vw, 32px);
   font-weight: 600;
 }
 
@@ -189,7 +189,7 @@ header.global {
 }
 header.global .logotype {
   text-align: center;
-  font-size: 40px;
+  font-size: clamp(20px, 5vw, 40px);
   font-weight: 600;
 }
 
@@ -204,10 +204,16 @@ main > .front-page article {
   justify-content: center;
   align-items: center;
   height: 100%;
+  text-align: center;
 }
 main > .front-page article > .img_container {
   width: 40%;
   margin-top: 12px;
+}
+main > .bestsellers .bestsellers_inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 main > .bestsellers h2 {
   text-align: center;
@@ -243,32 +249,53 @@ main > .bestsellers .items_container > article > .button_block {
   align-items: center;
   padding: 0 28px;
 }
+@media screen and (max-width: 992px) {
+  main > .bestsellers .items_container {
+    flex-direction: column;
+    width: 60%;
+  }
+}
+@media screen and (max-width: 648px) {
+  main > .bestsellers .items_container {
+    width: 100%;
+  }
+}
 main > .reg_form .reg_form_inner {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
 }
-main > .reg_form .reg_form_inner article {
+main > .reg_form .reg_form_inner > article {
   width: 40%;
 }
-main > .reg_form .reg_form_inner article form {
+main > .reg_form .reg_form_inner > article > form {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-main > .reg_form .reg_form_inner article form .form-places {
+main > .reg_form .reg_form_inner > article > form > .form-places {
   display: flex;
   flex-direction: column;
   gap: 12px;
   width: 100%;
 }
-main > .reg_form .reg_form_inner article form .form-places label {
+main > .reg_form .reg_form_inner > article > form > .form-places label {
   display: flex;
   flex-direction: column;
   align-items: stretch;
   gap: 8px;
   width: 100%;
+}
+@media screen and (max-width: 800px) {
+  main > .reg_form .reg_form_inner > article {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 466px) {
+  main > .reg_form .reg_form_inner > article {
+    width: 100%;
+  }
 }
 main > .reg_form .reg_form_inner .form-buttons {
   margin-top: 28px;
