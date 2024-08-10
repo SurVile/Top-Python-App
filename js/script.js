@@ -21,15 +21,19 @@ send_reg.addEventListener('click', () => {
     tg.close();
 })
 
-buy_item.addEventListener('click', () => {
-    let button_block_info = this.parentElement;
-    let article_name = button_block_info.parentElement.name;
+buy_item.forEach((button) => {
+    this.addEventListener('click', () => {
+        let button_block_info = this.parentElement;
+        let article_name = button_block_info.parentElement.name;
 
-    let article_data = {
-        data_type: 'buy_item',
-        data_name: article_name
-    }
-    tg.sendData(JSON.stringify(article_data));
-
-    tg.close();
+        alert(article_name);
+    
+        // let article_data = {
+        //     data_type: 'buy_item',
+        //     data_name: article_name
+        // }
+        // tg.sendData(JSON.stringify(article_data));
+    
+        // tg.close();
+    });
 });
